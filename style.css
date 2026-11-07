@@ -1,0 +1,211 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e0e7ff, #fce7f3);
+    min-height: 100vh;
+}
+
+.pricing-section {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+h1 {
+    font-size: 38px;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.billing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 45px;
+}
+
+.discount {
+    color: #16a34a;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* Toggle switch */
+.switch {
+    position: relative;
+    width: 55px;
+    height: 28px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    inset: 0;
+    background: #888;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 4px;
+    bottom: 4px;
+    background: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background: #6366f1;
+}
+
+input:checked + .slider::before {
+    transform: translateX(27px);
+}
+
+/* Pricing cards */
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+    background: white;
+    width: 290px;
+    padding: 35px 25px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.card h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.price {
+    font-size: 32px;
+    color: #6366f1;
+    margin-bottom: 25px;
+}
+
+.price span {
+    font-size: 14px;
+    color: #777;
+}
+
+.card ul {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.card li {
+    padding: 10px 0;
+    color: #555;
+}
+
+.card button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background: #6366f1;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card button:hover {
+    background: #4338ca;
+}
+
+/* Popular and Best Value ribbons */
+.ribbon {
+    position: absolute;
+    top: 18px;
+    right: -35px;
+    width: 140px;
+    padding: 7px;
+    background: #f97316;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    transform: rotate(45deg);
+}
+
+.best .ribbon {
+    background: #16a34a;
+}
+
+.popular {
+    border: 2px solid #6366f1;
+}
+
+.best {
+    border: 2px solid #16a34a;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+    .pricing-section {
+        padding: 40px 15px;
+    }
+
+    h1 {
+        font-size: 29px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+.message {
+    display: none;
+    max-width: 450px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #dcfce7;
+    color: #166534;
+    border: 2px solid #16a34a;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}

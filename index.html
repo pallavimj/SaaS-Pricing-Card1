@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaaS Pricing Plans</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section class="pricing-section">
+
+        <h1>Choose Your Plan</h1>
+        <p class="subtitle">Simple pricing for everyone</p>
+
+        <div class="billing">
+            <span>Monthly</span>
+            <label class="switch">
+                <input type="checkbox" id="billingToggle">
+                <span class="slider"></span>
+            </label>
+            <span>Yearly</span>
+            <span class="discount">Save 20%</span>
+        </div>
+
+        <div class="pricing-container">
+
+            <!-- Basic Plan -->
+            <div class="card">
+                <h2>Basic</h2>
+                <p>For beginners</p>
+
+                <h3 class="price" data-month="499" data-year="399">
+                    ₹499<span>/month</span>
+                </h3>
+
+                <ul>
+                    <li>✔ 5 Projects</li>
+                    <li>✔ Basic Support</li>
+                    <li>✔ 10 GB Storage</li>
+                    <li>✔ Basic Features</li>
+                </ul>
+
+                <button>Get Started</button>
+            </div>
+
+            <!-- Popular Plan -->
+            <div class="card popular">
+                <div class="ribbon">POPULAR</div>
+
+                <h2>Professional</h2>
+                <p>For growing teams</p>
+
+                <h3 class="price" data-month="999" data-year="799">
+                    ₹999<span>/month</span>
+                </h3>
+
+                <ul>
+                    <li>✔ Unlimited Projects</li>
+                    <li>✔ Priority Support</li>
+                    <li>✔ 100 GB Storage</li>
+                    <li>✔ Advanced Features</li>
+                </ul>
+
+                <button>Get Started</button>
+            </div>
+
+            <!-- Premium Plan -->
+            <div class="card best">
+                <div class="ribbon">BEST VALUE</div>
+
+                <h2>Enterprise</h2>
+                <p>For large businesses</p>
+
+                <h3 class="price" data-month="1999" data-year="1599">
+                    ₹1999<span>/month</span>
+                </h3>
+
+                <ul>
+                    <li>✔ Unlimited Projects</li>
+                    <li>✔ 24/7 Support</li>
+                    <li>✔ Unlimited Storage</li>
+                    <li>✔ All Premium Features</li>
+                </ul>
+
+                <button>Get Started</button>
+            </div>
+
+        </div>
+    </section>
+    <div id="message" class="message"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
